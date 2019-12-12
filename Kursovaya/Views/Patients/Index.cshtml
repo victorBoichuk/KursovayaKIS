@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Kursovaya.Models.Patients>
+@{
+    ViewBag.Title = "Все пользователи";
+}
+<a asp-action="Create">Добавить пользователя</a>
+<table class="table">
+    <tr><td>Имя</td><td>Дата рождения</td><td>Адрес</td><td>Номер паспорта</td><td>Номер страхового полиса</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.name</td><td>@item.date</td><td>@item.address</td><td>@item.passport_number</td><td>@item.insurance_number</td></tr>
+    }
+</table>
